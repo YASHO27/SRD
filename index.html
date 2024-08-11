@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>SRD FILMS</title>
+    
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/logo.png">
+    <style>
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: transparent; /* Change this to match your design */
+}
+
+.navbar-dark .navbar-brand img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('path-to-toggler-icon.png'); /* Update path if custom icon is used */
+}
+
+/* Adjustments for dropdown and social icons */
+.dropdown-menu {
+    background-color: transparent; /* Match the background color with navbar */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons .fa-stack {
+    margin: 0 5px;
+}
+
+.social-icons .fa-stack a {
+    color: #fff; /* Match the icon color with your design */
+}
+
+@media (max-width: 991.98px) {
+    .navbar-brand img {
+        height: 30px; /* Smaller logo for mobile */
+    }
+}
+s
+        .iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+iframe {
+    border: none; /* Optional: to remove iframe border */
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.iframe-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.p-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iframe-container {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container {
+    flex: 1 1 300px;
+    padding-left: 20px;
+}
+
+.p-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .iframe-container, .text-container {
+        flex: 1 1 100%;
+        padding-left: 0;
+    }
+
+    .content-container {
+        gap: 10px;
+    }
+}
+
+.iframe-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.iframe-container {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust as needed */
+    max-width: 620px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack iframe and paragraph vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+iframe {
+    width: 100%;
+    height: 350px; /* Adjust height as needed */
+}
+
+.iframe-description {
+    margin-top: 10px;
+    text-align: center; /* Center the text under each iframe */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .iframe-container {
+        flex: 1 1 calc(50% - 20px); /* Two iframes per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .iframe-container {
+        flex: 1 1 100%; /* One iframe per row */
+    }
+
+    iframe {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.iframe-description {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .iframe-wrapper {
+        padding-top: 56.25%; /* Aspect ratio 16:9 */
+    }
+}
+/* General container styling */
+.video-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-category {
+    margin-bottom: 40px;
+}
+
+.section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9; /* Maintain 16:9 Aspect Ratio */
+    border: 0;
+}
+
+.video-description {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    background-color: #fafafa;
+}
+
+
+
+
+    </style>
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a> -->
+
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#services">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item page-scroll" href="project.html">Project Details</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="#your-link">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span>
+        </div> <!-- end of navbar-collapse -->
+    </div> <!-- end of container -->
+</nav> <!-- end of navbar -->
+<!-- end of navigation -->
+
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h1 class="h1-large">I love to create beautiful and efficient websites</h1>
+                        <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
+                        <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+    <!-- About-->
+    <div id="about" class="basic-1 bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-container first">
+                        <h2>Hi there I'm Sahil Devkule,</h2>
+                        <p>With 5 years in filmmaking, I bring a creative and adaptive approach to every project. Passionate about cinema, I excel in both team settings and independently, known for a visionary perspective and strong self-motivation.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container second">
+                        <div class="time">2022 - PRESENT</div>
+                        <h6>Assistant Director & DOP</h6>
+                        <p>Working as an Assistant Director and Director of Photography on various projects.</p>
+                        <div class="time">2021 - 2022</div>
+                        <h6>Cinematographer</h6>
+                        <p>Shot and managed cinematography for a major digital agency's project.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container third">
+                        <div class="time">2019 - 2020</div>
+                        <h6>Photographer</h6>
+                        <p>Provided in-house photography services for events, still making.</p>
+                        <div class="time">2018 - 2019</div>
+                        <h6>Editor</h6>
+                        <p>Worked as a graphic designer and editor for poster and albums.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of about -->
+
+
+
+
+    <!-- Details -->
+	<div class="split">
+		<div class="area-1">
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
+            <div class="container">    
+                <div class="row">
+                    <div class="col-lg-12">     
+                        
+                        <!-- Text Container -->
+                        <div class="text-container">
+                            <h4>WHY WORK WITH ME</h4>
+                            <p>I am passionate about capturing the essence of every moment, and I invest the time needed to truly understand your vision and bring it to life through my lens</p>
+                            <h5>DESIGN TOOLS</h5>
+                            <p>I use top-notch cameras and lenses, along with Adobe Photoshop and Lightroom, to deliver polished and stunning results.</p>
+                            
+                            
+                            <div class="icons-container">
+                                <img src="images/ps.png" alt="alternative">
+                                <img src="images/lr.png" alt="alternative">
+                                <img src="images/pr.png" alt="alternative">
+                                <!-- <img src="images/details-icon-css.png" alt="alternative">
+                                <img src="images/details-icon-bootstrap.png" alt="alternative">
+                                <img src="images/details-icon-javascript.png" alt="alternative"> -->
+                            </div> <!-- end of icons-container -->
+                        </div> <!-- end of text-container -->
+                        <!-- end of text container -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of split -->
+    <!-- end of details -->
+
+
+    <!-- Projects -->
+    <div id="projects" class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading" style="margin-bottom: 50px;">Delivered projects</h2>
+                    
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                      
+                        <div class="image-container" style="margin-bottom: 50px;"  >
+                            <p class="p-heading" style="margin-bottom: 20px;">FILM AS A 'ASSISTANT DIRECTOR'<br>
+                                Planet Marathi's Moghal Mardini Chhatrapati Tararani<br>
+                                4 Month 2022</p>
+                           
+                            <div class="content-container">
+                                <div class="iframe-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9QJzIRgx1e0?si=wsmpNEsB3f1xMU2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="text-container">
+                                    <p>. Worked from beginning till the end of film.</p>
+                                    <p>. The movie was a periodic film.</p>
+                                    <p>. Managed artists & junior artists.</p>
+                                    <p>. Was in charge of the continuity & clap.</p>
+                                    <p>. Worked with the team and made sure everything was well coordinated.</p>
+                                </div>
+                            </div>
+                        </div> <!-- end of image-container -->
+                        
+                        <div class="video-section">
+                            <div class="video-category">
+                                <p class="section-heading">Advertisement Film<br>Asst. Director / Camera Assistant</p>
+                                <div class="video-grid">
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/vmV3mr1qbPw?si=7FrOLfB0EXCB87NW" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Union nari sakti (Union Bank of India)</p>
+                                    </div>
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/LCU6bvpO5mY?si=ZhAbBamNDyxpnaGq" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Colours TV Shiv Sakti Serial Promo</p>
+                                    </div>
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/bjZj0EBSx0s?si=4eFBTVygS_Lulrc8" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Zuari Urban Maali</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="video-category">
+                                <p class="section-heading">Music Video</p>
+                                <div class="video-grid">
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/3KlulOn8b3g?si=lIZChYd4XERDBb2C" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">KRANTI Rap Song</p>
+                                    </div>
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/_HGE5cAID1I?si=gpCL6Mnb1Gmgi5sj" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Haq Hai Rap Song</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="video-category">
+                                <p class="section-heading">SHORT FILM as Director</p>
+                                <div class="video-grid">
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/ovk2tDmoDNs?si=b5MbvDqilQivg2gZ" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Char Din Ki Chandni</p>
+                                    </div>
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/XNnPgzHhYW8?si=2mioBuTkuurh6j3Y" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Sukhkarta</p>
+                                    </div>
+                                </div>
+                                <div class="video-grid" style="margin-top: 5%;">
+
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/5FPC-NV8dkE?si=bm0cc_wcOLF-juGO" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Pudil Sthanak</p>
+                                    </div>
+                                    <div class="video-item">
+                                        <iframe src="https://www.youtube.com/embed/6SzcI1Agri4?si=sKIcNyRVVHEpI2Ri" title="YouTube video player" allowfullscreen></iframe>
+                                        <p class="video-description">Pressure</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+                    
+             <div class="carousel-container">
+    <p class="p-heading">Short Videos</p>
+    <div class="carousel">
+        <div class="carousel-slide">
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/glzdGKw3CL0?si=90A9pIXpT-9pNJQR" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+            <p class="iframe-description">Tomato Thief</p>
+        </div>
+        <div class="carousel-slide">
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/p8Z9dNLTpKw?si=YwuDaEKu50mv2rpp" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+            <p class="iframe-description">Dhobi Ghat</p>
+        </div>
+        <div class="carousel-slide">
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/mgDfVE1OLdM?si=yyd8FRGku4vIbhqY" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+            <p class="iframe-description">Heart & Brain</p>
+        </div>
+        <div class="carousel-slide">
+            <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/CGx5fNl1i80?si=QEJ0ZC1wgYId8-tl" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+            <p class="iframe-description">Girgoan Shobhayatra</p>
+        </div>
+    </div>
+    <button class="carousel-button prev">Previous</button>
+    <button class="carousel-button next">Next</button>
+</div>
+
+
+
+
+
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of projects -->
+
+
+  
+    <!-- Works -->
+    <div class="basic-4">
+        <div class="container">
+            <h2 class="h2-heading" style="margin-bottom: 50px;">Delivered projects</h2>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-container">
+                        <div class="image-container">
+                            <a href="project.html">
+                                <img class="img-fluid" src="images/work-1.jpg" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> Zigoland, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container">
+                        <div class="image-container">
+                            <a href="project.html">
+                                <img class="img-fluid" src="images/work-2.jpg" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> Visodream, <strong>Project:</strong> developed a new forum for the Visodream community <a class="blue" href="project.html">details</a></p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container">
+                        <div class="image-container">
+                            <a href="project.html">
+                                <img class="img-fluid" src="images/work-3.jpg" alt="alternative">
+                            </a>
+                        </div> <!-- end of image-container -->
+                        <p><strong>For:</strong> Primoday, <strong>Project:</strong> complete redesign of their corporate website and platform <a class="blue" href="project.html">details</a></p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-4 -->
+    <!-- end of works -->
+
+
+    
+
+    <!-- Section Divider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <hr class="section-divider">
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <!-- end of section divider -->
+
+
+    
+
+    <!-- Contact -->
+    <div id="contact" class="form-1 bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Contact details</h2>
+                    <p class="p-heading">For any type of online project please don't hesitate to get in touch with me. The fastest way is to send me your message using the following email <a class="blue no-line" href="#your-link">contact@domain.com</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <!-- Contact Form -->
+                    <form id="contactForm" action="https://formspree.io/f/xnnavzyn"  method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="cname" required name="name">
+                            <label class="label-control" for="cname">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="cemail" required name="email">
+                            <label class="label-control" for="cemail">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" id="cmessage" required name="message"></textarea>
+                            <label class="label-control" for="cmessage">Message</label>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">Submit</button>
+                        </div>
+                    </form>
+                    <!-- end of contact form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->  
+    <!-- end of contact -->
+
+
+    <!-- Footer -->
+    <div class="footer bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="social-container">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of social-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a class="no-line" href="#your-link">Your name</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Distributed By <a class="no-line" href="https://themewagon.com/">Themewagon</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+        
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+    <script>
+        const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const carousel = document.querySelector('.carousel');
+const slides = document.querySelectorAll('.carousel-slide');
+let currentIndex = 0;
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+prevButton.addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+});
+
+nextButton.addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+});
+
+// Auto slide
+setInterval(() => {
+    showSlide(currentIndex + 1);
+}, 5000); // Change slide every 5 seconds
+
+    </script>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
